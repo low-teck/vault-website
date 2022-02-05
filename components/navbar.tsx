@@ -5,7 +5,7 @@ import logo from '../public/favicon.ico';
 const Navbar = () => {
 	const { theme, setTheme } = useTheme();
 	return (
-		<nav className="w-full z-50">
+		<nav className="w-full z-50 h-16">
 			<div className="flex flex-row justify-between">
 				<span className="flex row m-3">
 					<Image src={logo} alt="Vault" width={40} height={10} className="h-8 w-8 mr-2" />
