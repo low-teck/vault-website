@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Footer from './footer';
-import Navbar from './navbar';
+import Head from "next/head";
+import Footer from "./footer";
+import Navbar from "./navbar";
 
 type Props = {
 	children: React.ReactNode;
@@ -11,10 +11,13 @@ const Layout = ({ children }: Props) => {
 		<div className="min-h-screen flex flex-col">
 			<Head>
 				<title>Vault</title>
-				<meta name="description" content="Secure your app using cryptographic algorithms" />
+				<meta
+					name="description"
+					content="Secure your app using cryptographic algorithms"
+				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<header>
+			<header className="sticky top-0 z-99">
 				<Navbar />
 			</header>
 			<div className="flex flex-col md:flex-row flex-1">
