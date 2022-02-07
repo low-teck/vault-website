@@ -8,7 +8,8 @@ import linux from "../public/linux.png";
 import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
-	const [os, setOs] = useState<String>();
+	const [link, setLink] = useState<string>();
+	const [os, setOs] = useState<string>();
 	useEffect(() => {
 		let userAgent = navigator.appVersion;
 		let currOs;
@@ -21,25 +22,23 @@ const Home: NextPage = () => {
 		}
 
 		setOs(currOs);
-	}, []);
-	useEffect(() => {
-		console.log(os);
-	}, [os]);
-	const downloadApp = () => {
-		switch (os) {
-			case "mac":
+		switch (currOs) {
+			case "Mac":
 				// download mac app
+				setLink(
+					"https://github.com/low-teck/vault/releases/download/v0.1.0-alpha/Vault-0.1.0-arm64.dmg"
+				);
 				break;
-			case "windows":
+			case "Windows":
 				// download windows app
 				break;
-			case "linux":
+			case "Linux":
 				// download linux app
 				break;
 			default:
 				break;
 		}
-	};
+	}, []);
 
 	return (
 		<div className="flex flex-col">
@@ -59,9 +58,11 @@ const Home: NextPage = () => {
 								encrypt your files using strong cryptographic
 								algorithms.
 							</h3>
-							<button onClick={downloadApp}>
-								Download for {os}
-							</button>
+							<a href={link}>
+								<button className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">
+									Download for {os}
+								</button>
+							</a>
 						</div>
 						{/*<div className="flex align-left sm:w-500 sm:h-500">
 							<Image src={heroImage} alt="hero image" />
