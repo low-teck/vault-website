@@ -44,7 +44,7 @@ const Home: NextPage = () => {
 	}, []);
 
 	return (
-		<div className="flex flex-col overflow-x-hidden">
+		<div className="flex flex-col h-screen">
 			<section className="w-screen h-screen">
 				<div className="bg-hero-pattern bg-center bg-no-repeat bg-cover h-full w-full">
 					<div className="flex text-center justify-center h-full w-full">
