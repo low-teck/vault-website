@@ -19,6 +19,8 @@ const Home: NextPage = () => {
 			currOs = "Windows";
 		} else if (userAgent.includes("Linux")) {
 			currOs = "Linux";
+		} else {
+			currOs = "";
 		}
 
 		setOs(currOs);
@@ -36,6 +38,7 @@ const Home: NextPage = () => {
 				// download linux app
 				break;
 			default:
+				setLink("");
 				break;
 		}
 	}, []);
@@ -59,8 +62,13 @@ const Home: NextPage = () => {
 								algorithms.
 							</h3>
 							<a href={link}>
-								<button className="bg-blue hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">
-									Download for {os}
+								<button
+									disabled={link ? false : true}
+									className="bg-blue hover:bg-blue-700 disabled:bg-lightblue disabled:opacity-70 disabled:text-gray text-black font-bold py-2 px-4 rounded"
+								>
+									{os
+										? `Download for ${os}`
+										: `Open on your PC`}
 								</button>
 							</a>
 						</div>
