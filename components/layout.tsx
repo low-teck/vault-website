@@ -8,7 +8,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
 	return (
-		<div className="h-full overflow-x-hidden flex flex-col">
+		<div className="h-screen overflow-x-hidden flex flex-col">
 			<Head>
 				<title>Vault</title>
 				<meta
@@ -17,12 +17,10 @@ const Layout = ({ children }: Props) => {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<header className="sticky top-0 z-99">
+			<header className="sticky top-0 z-50">
 				<Navbar />
 			</header>
-			<div className="flex flex-col md:flex-row flex-1">
-				<main className="flex-1">{children}</main>
-			</div>
+			<main className="absolute flex-1 z-10">{children}</main>
 			<Footer />
 		</div>
 	);

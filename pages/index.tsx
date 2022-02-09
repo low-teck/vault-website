@@ -1,9 +1,5 @@
 import type { NextPage } from "next";
 import Layout from "../components/layout";
-import Image from "next/image";
-import heroImage from "../public/hero-img.png";
-import mac from "../public/mac.png";
-import windows from "../public/windows.png";
 import linux from "../public/linux.png";
 import { useEffect, useState } from "react";
 
@@ -46,8 +42,8 @@ const Home: NextPage = () => {
 	return (
 		<div className="flex flex-col h-screen">
 			<section className="w-screen h-screen">
-				<div className="bg-hero-pattern bg-center bg-no-repeat bg-cover h-full w-full">
-					<div className="flex text-center justify-center h-full w-full">
+				<div className="bg-hero-pattern bg-center bg-no-repeat bg-cover h-screen w-full">
+					<div className="flex text-center justify-center h-screen w-full">
 						<div className="flex justify-evenly w-8/12  flex-col px-10  ">
 							<h1 className="lg:text-8xl text-2xl font-lato  ">
 								Secure your files,
