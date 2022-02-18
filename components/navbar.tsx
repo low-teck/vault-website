@@ -1,5 +1,6 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../public/favicon.ico";
 
 const Navbar = () => {
@@ -15,9 +16,11 @@ const Navbar = () => {
 						height={10}
 						className="h-8 w-8 mr-2"
 					/>
-					<p className="font-lato text-primary font-normal lowercase mx-3 text-3xl">
-						vault
-					</p>
+					<Link href="/">
+						<button className="font-lato text-primary font-normal lowercase mx-3 text-3xl">
+							vault
+						</button>
+					</Link>
 				</span>
 				{/*<button
 					aria-label="Toggle Dark Mode"
@@ -28,7 +31,9 @@ const Navbar = () => {
 					dark
 				</button>*/}
 				<span className="flex row m-3">
-					<button className="mx-3 rounded-none ">About</button>
+					<Link href="/about">
+						<button className="mx-3 rounded-none ">About</button>
+					</Link>
 					<button className="mx-3">Docs</button>
 				</span>
 			</div>
