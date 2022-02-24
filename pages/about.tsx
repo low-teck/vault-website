@@ -8,11 +8,11 @@ const About: NextPage = () => {
 					<div className="flex text-center justify-center h-screen w-full">
 						<div className="flex justify-evenly w-8/12  flex-col px-10  ">
 							<h1 className="lg:text-8xl text-2xl font-lato  ">
-								low-teck
+								Low-Teck
 								<br />
 							</h1>
 							<div className="flex justify-evenly flex-row w-full">
-								<div className="font-lato">
+								<div className="font-lato bg-white px-10 py-5">
 									<h3 className="text-2xl font-lato">
 										Tanmay
 									</h3>
@@ -20,7 +20,6 @@ const About: NextPage = () => {
 									<ul className="list-none hover:list-disc">
 										<li>
 											<a
-												target="_blank"
 												href="https://github.com/gairTanm"
 											>
 												github
@@ -28,7 +27,6 @@ const About: NextPage = () => {
 										</li>
 										<li>
 											<a
-												target="_blank"
 												href="https://gairTanm.github.io"
 											>
 												website
@@ -36,19 +34,19 @@ const About: NextPage = () => {
 										</li>
 									</ul>
 								</div>
-								<div>
+								<div  className="font-lato bg-white px-10 py-5">
 									<h3 className="text-2xl font-lato">
 										Ujjwal
 									</h3>
 									<br />
 									<ul className="list-none hover:list-disc">
 										<li>
-											<a target="_blank" href="">
+											<a href="https://github.com/ujjwal404">
 												github
 											</a>
 										</li>
 										<li>
-											<a target="_blank" href="">
+											<a href="https://ujjwalkadam.tech">
 												website
 											</a>
 										</li>

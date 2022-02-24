@@ -34,7 +34,7 @@ const Navbar = () => {
 					<Link href="/about">
 						<button className="mx-3 rounded-none ">About</button>
 					</Link>
-					<button className="mx-3">Docs</button>
+					{/* <button className="mx-3">Docs</button> */}
 				</span>
 			</div>
 		</nav>

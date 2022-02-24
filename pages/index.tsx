@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 		} else if (userAgent.includes("Linux")) {
 			currOs = "Linux";
 		} else {
-			currOs = "";
+			currOs = "Windows";
 		}
 
 		setOs(currOs);
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 				);
 				break;
 			default:
-				setLink("");
+				setLink("https://github.com/low-teck/vault/releases/download/v0.1.0-alpha/Vault-0.1.0.dmg");
 				break;
 		}
 	}, []);
