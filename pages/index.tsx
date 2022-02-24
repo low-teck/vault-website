@@ -24,14 +24,20 @@ const Home: NextPage = () => {
 			case "Mac":
 				// download mac app
 				setLink(
-					"https://github.com/low-teck/vault/releases/download/v0.1.0-alpha/Vault-0.1.0-arm64.dmg"
+					"https://github.com/low-teck/vault/releases/download/v0.1.0-alpha/Vault-0.1.0.dmg"
 				);
 				break;
 			case "Windows":
 				// download windows app
+				setLink(
+					"https://github.com/low-teck/vault/releases/download/v0.1.0-alpha/Vault.Setup.0.1.0.exe"
+				);
 				break;
 			case "Linux":
 				// download linux app
+				setLink(
+					"https://github.com/low-teck/vault/releases/download/v0.1.0-alpha/x_0.1.0_amd64.deb"
+				);
 				break;
 			default:
 				setLink("");
